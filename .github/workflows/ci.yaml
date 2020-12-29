@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: preetjdp/typescript-coverage-report@test2
+      - uses: devfolioco/typescript-coverage-report@test2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
