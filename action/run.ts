@@ -54,7 +54,7 @@ export const run = async (): Promise<void> => {
     conclusion: "success",
     name: "This is just a test",
     output: {
-      title: "Typescript Coverage Report",
+      title: "Typescript Coverage Report test",
       summary: `**Typescript Coverage Percentage**: ${coverageResult.percentage.toFixed(
         2
       )}%`,
