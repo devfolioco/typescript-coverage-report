@@ -38,10 +38,11 @@ type UpdateCheckRunOptions = Required<
 async function updateCheckRun(
   octokit: OctokitInstance,
   checkId: number,
-  { conclusion, output }: UpdateCheckRunOptions
+  { conclusion, output, name }: UpdateCheckRunOptions
 ) {
   core.info(`Updating check: ${checkId}`);
   await octokit.checks.update({
+    name,
     // eslint-disable-next-line @typescript-eslint/camelcase
     check_run_id: checkId,
     // eslint-disable-next-line @typescript-eslint/camelcase
