@@ -57,7 +57,13 @@ export const run = async (): Promise<void> => {
       summary: `**Typescript Coverage Percentage**: ${coverageResult.percentage.toFixed(
         2
       )}%`,
-      text: markdownReport
+      text: markdownReport,
+      images: [
+        {
+          alt: "Cat",
+          image_url: "https://static.scientificamerican.com/sciam/cache/file/92E141F8-36E4-4331-BB2EE42AC8674DD3_source.jpg"
+        }
+      ]
     }
   });
 };

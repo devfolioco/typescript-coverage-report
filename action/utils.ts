@@ -35,7 +35,7 @@ type UpdateCheckRunOptions = Required<
 async function updateCheckRun(
   octokit: OctokitInstance,
   checkId: number,
-  { conclusion, output }: UpdateCheckRunOptions
+  { conclusion, output, }: UpdateCheckRunOptions
 ) {
   core.info(`Updating check: ${checkId}`);
   await octokit.checks.update({
@@ -46,6 +46,7 @@ async function updateCheckRun(
     status: "completed",
     ...github.context.repo,
     conclusion,
+    name: "code-coverage",
     output
   });
 
