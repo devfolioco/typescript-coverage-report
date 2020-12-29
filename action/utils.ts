@@ -30,10 +30,7 @@ type UpdateCheckRunOptions = Required<
     RestEndpointMethodTypes["checks"]["update"]["parameters"],
     "conclusion" | "output"
   >
-> &
-  Partial<
-    Pick<RestEndpointMethodTypes["checks"]["update"]["parameters"], "name">
-  >;
+>
 
 async function updateCheckRun(
   octokit: OctokitInstance,
