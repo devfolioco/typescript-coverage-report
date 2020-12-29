@@ -50,6 +50,13 @@ async function updateCheckRun(
     status: "completed",
     ...github.context.repo,
     conclusion,
+    actions: [
+      {
+        label: "test1",
+        description: "test2",
+        identifier: "test3"
+      }
+    ],
     output
   });
 
