@@ -1,0 +1,13 @@
+name: CI
+
+on:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: devfolioco/typescript-coverage-report@Add-Github-Action
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}

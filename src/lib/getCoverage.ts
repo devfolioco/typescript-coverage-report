@@ -3,7 +3,7 @@ import {
   AnyInfo,
   FileTypeCheckResult,
   LintOptions
-} from "type-coverage-core";
+} from "type-coverage-core/src/index";
 
 type FileCount = Map<
   string,
